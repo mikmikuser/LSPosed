@@ -5,34 +5,47 @@ OrionLib:MakeNotification({
     Name = "THANK FOR USING MY SCRIPT",
     Content = "GAME SUPPORTED!!!",
     Image = "rbxassetid://4483345998",
-    Time = 5
+    Time = 10
 })
 
 OrionLib:MakeNotification({
-    Name = "SCRIPT LOADED",
+    Name = "COPIED!!!",
     Content = "https://discord.com/invite/eejZ9Hh8SJ",
     Image = "rbxassetid://4483345998",
-    Time = 5
+    Time = 10
 })
 
 setclipboard("https://discord.com/invite/eejZ9Hh8SJ")
 
-local Tab = Window:MakeTab({
-        Name = "☣MAIN☣",
-        Icon = "rbxassetid://4483345998",
-        PremiumOnly = false
+local MainTab = Window:MakeTab({
+    Name = "MAIN",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
-local Section = TutTab:AddSection({
-        Name = "✡HUB✡"
+local Section = MainTab:AddSection({
+    Name = "☣Main☣"
 })
 
-MainTab:AddToggle({
-        Name = "MATSUNE HUB",
-        Default = false,
-        Callback = function()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/MatsuneV3.lua"))()
-        end    
+MainTab:AddButton({
+	Name = "MATSUNE HUB V3",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/MatsuneV3.lua"))()
+  	end    
 })
 
-OrionLib:Destroy()
+MainTab:AddButton({
+	Name = "HOHO HUB",
+	Callback = function()
+      	loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/Free/BloxFruitFreeV3.lua'))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "FAI FAO V2",
+	Callback = function()
+      	loadstring(game:HttpGet"https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua")()
+  	end    
+})
+
+OrionLib:Init()
