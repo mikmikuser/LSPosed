@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "MEGA HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "KEY SYSTEM", HidePremium = false, IntroText = "MEGA HUB", SaveConfig = true, ConfigFolder = "KEY SYSTEM"})
 
 -- Tabs
 local MainTab = Window:MakeTab({
