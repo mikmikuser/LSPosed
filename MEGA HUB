@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "MEGA HUB", HidePremium = false, IntroText = "MEGA HUB V1", SaveConfig = true, ConfigFolder = "MEGA HUBV1"})
+local Window = OrionLib:MakeWindow({Name = "MEGA HUB V1", HidePremium = false, IntroText = "MEGA HUB", SaveConfig = true, ConfigFolder = "MEGA HUBV1"})
 
 OrionLib:MakeNotification({
     Name = "THANK FOR USING MY SCRIPT",
