@@ -24,7 +24,7 @@ local MainTab = Window:MakeTab({
 })
 
 local Section = MainTab:AddSection({
-    Name = "Main"
+    Name = "☪Main☪"
 })
 
 MainTab:AddButton({
@@ -62,6 +62,32 @@ MainTab:AddButton({
   	end    
 })
 
-MAINTab:AddLabel("WARNING")
+local OutputLabel = KeySection:AddLabel("WARNING")
+
+local MiscTab = Window:MakeTab({
+    Name = "☸Misc☸",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = MiscTab:AddSection({
+    Name = "Misc"
+})
+
+MiscTab:AddLabel("Credits to Mik_player123")
+
+MiscTab:AddButton({
+	Name = "Join our Discord",
+	Callback = function()
+		setclipboard("https://discord.com/invite/eejZ9Hh8SJ")
+	end
+})
+
+MiscTab:AddButton({
+	Name = "YOUTUBE Mik_player",
+	Callback = function()
+		setclipboard("https://www.youtube.com/@Scripter360")
+	end
+})
 
 OrionLib:Init()
