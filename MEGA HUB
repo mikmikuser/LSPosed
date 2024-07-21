@@ -1,18 +1,8 @@
--- Load Orion Library
-local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source'))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "MEGA HUB", HidePremium = false, IntroText = "MEGA HUB V1", SaveConfig = true, ConfigFolder = "MEGA HUBV1"})
 
--- Create Main Window
-local Window = OrionLib:MakeWindow({
-    Name = "MEGA HUB",
-    HidePremium = false,
-    IntroText = "MEGA HUB V1",
-    SaveConfig = true,
-    ConfigFolder = "MEGA HUBV1"
-})
-
--- Notifications
 OrionLib:MakeNotification({
-    Name = "THANK YOU FOR USING MY SCRIPT",
+    Name = "THANK FOR USING MY SCRIPT",
     Content = "GAME SUPPORTED!!!",
     Image = "rbxassetid://4483345998",
     Time = 10
@@ -25,61 +15,79 @@ OrionLib:MakeNotification({
     Time = 10
 })
 
--- Copy link to clipboard
 setclipboard("https://discord.com/invite/eejZ9Hh8SJ")
 
--- Main Tab
 local MainTab = Window:MakeTab({
     Name = "MAIN",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
--- Main Section
 local Section = MainTab:AddSection({
-    Name = "☪ Main ☪"
-})
-
--- Add Buttons to Main Tab
-MainTab:AddButton({
-    Name = "MATSUNE HUB V3",
-    Callback = function()
-        local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/MatsuneV3.lua"))()
-        end)
-        if not success then
-            OrionLib:MakeNotification({
-                Name = "Error",
-                Content = "Failed to load Matsune HUB V3: " .. err,
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-        end
-    end    
+    Name = "☪Main☪"
 })
 
 MainTab:AddButton({
-    Name = "HOHO HUB",
-    Callback = function()
-        local success, err = pcall(function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/Free/BloxFruitFreeV3.lua'))()
-        end)
-        if not success then
-            OrionLib:MakeNotification({
-                Name = "Error",
-                Content = "Failed to load HOHO HUB: " .. err,
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-        end
-    end    
+	Name = "MATSUNE HUB V3",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/MatsuneV3.lua"))()
+  	end    
 })
 
 MainTab:AddButton({
-    Name = "FAI FAO V2",
-    Callback = function()
-        local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua"))()
-        end)
-        if not success then
-            Orion
+	Name = "HOHO HUB",
+	Callback = function()
+      	loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/Free/BloxFruitFreeV3.lua'))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "FAI FAO V2",
+	Callback = function()
+      	loadstring(game:HttpGet"https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua")()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "REDz HUB",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "RIN HUB",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/RinHubb/RinHub/main/RinXFruitFinder"))()
+  	end    
+})
+
+MainTab:AddLabel("⚠️WARNING⚠️")
+
+local MiscTab = Window:MakeTab({
+    Name = "☸Misc☸",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = MiscTab:AddSection({
+    Name = "Misc"
+})
+
+MiscTab:AddLabel("Credits to Mik_player123")
+
+MiscTab:AddButton({
+	Name = "Join our Discord",
+	Callback = function()
+		setclipboard("https://discord.com/invite/eejZ9Hh8SJ")
+	end
+})
+
+MiscTab:AddButton({
+	Name = "YOUTUBE Mik_player",
+	Callback = function()
+		setclipboard("https://www.youtube.com/@Scripter360")
+	end
+})
+
+OrionLib:Init()
