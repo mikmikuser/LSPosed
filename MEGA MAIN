@@ -49,7 +49,7 @@ function CheckKey()
     end
 
     _G.CheckedKey = true
-    local script = loadstring(game:HttpGet("https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx"))()
+    local script = loadstring(game:HttpGet("https://raw.githubusercontent.com/mikmikuser/MEGA-HUB/master/MEGA%20HUB"))()
     if script then
         script()
     else
