@@ -1,60 +1,67 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "MEGA HUB V0.1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "MEGA HUB V1", HidePremium = false, IntroText = "MEGA HUB", SaveConfig = true, ConfigFolder = "MEGA HUBV1"})
 
--- Tabs
+OrionLib:MakeNotification({
+    Name = "THANK FOR USING MY SCRIPT",
+    Content = "GAME SUPPORTED!!!",
+    Image = "rbxassetid://4483345998",
+    Time = 10
+})
+
+OrionLib:MakeNotification({
+    Name = "COPIED!!!",
+    Content = "https://discord.com/invite/eejZ9Hh8SJ",
+    Image = "rbxassetid://4483345998",
+    Time = 10
+})
+
+setclipboard("https://discord.com/invite/eejZ9Hh8SJ")
+
 local MainTab = Window:MakeTab({
-    Name = "Check Key",
+    Name = "MAIN",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
--- Sections
-local KeySection = MainTab:AddSection({
-    Name = "Key System"
+local Section = MainTab:AddSection({
+    Name = "â˜£Mainâ˜£"
 })
 
-_G.Key = "nothing yet"
-_G.CheckedKey = false
-
-KeySection:AddButton({
-    Name = "Copy Key Link",
-    Callback = function()
-        setclipboard("https://workink.net/1VtY/lymspwze")
-    end    
+MainTab:AddButton({
+	Name = "MATSUNE HUB V3ðŸ’€",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Yatsuraa/Matsune/main/MatsuneV3.lua"))()
+  	end    
 })
 
-local KeyLabel = KeySection:AddLabel("Key | " .. _G.Key)
-
-KeySection:AddTextbox({
-    Name = "Key",
-    Default = "",
-    TextDisappear = true,
-    Callback = function(txt)
-        _G.Key = txt
-        KeyLabel:Set("Key > " .. txt)
-        CheckKey()
-    end    
+MainTab:AddButton({
+	Name = "HOHO HUBðŸ’€",
+	Callback = function()
+      	loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HohoV2/Free/BloxFruitFreeV3.lua'))()
+  	end    
 })
 
-local OutputLabel = KeySection:AddLabel("")
+MainTab:AddButton({
+	Name = "FAI FAO V2ðŸ’€",
+	Callback = function()
+      	loadstring(game:HttpGet"https://raw.githubusercontent.com/PNguyen0199/Script/main/Fai-Fao-Ver2.lua")()
+  	end    
+})
 
-function CheckKey()
-    if _G.CheckedKey then
-        return
-    end
-    local key = game:HttpGet("https://redirect-api.work.ink/tokenValid/" .. _G.Key .. "?linkId=96825")
-    if key == 'False' then
-        OutputLabel:Set("KEY INVALID")
-        return
-    end
+MainTab:AddButton({
+	Name = "REDz HUBðŸ’€",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
 
-    _G.CheckedKey = true
-    local script = loadstring(game:HttpGet("https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx"))()
-    if script then
-        script()
-    else
-        OutputLabel:Set("Failed to load")
-    end
-end
+MainTab:AddButton({
+	Name = "RIN HUBðŸ’€",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/RinHubb/RinHub/main/RinXFruitFinder"))()
+  	end    
+})
+
+MAINTab:AddLabel("â˜¢WARNINGâ˜¢")
 
 OrionLib:Init()
